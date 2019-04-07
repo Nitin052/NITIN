@@ -2,23 +2,21 @@
 #include<stdlib.h>
 int main()
 {
-	int queue[5000],n,c,head,diff,dist;
+	int q[5000],n,h,d,dist=0;
 	printf("Enter the size of queue= ");
 	scanf("%d",&n);
 	printf("Enter the element in the queue=");
-	for (int i=0;i<n;i++)
+	for (int i=1;i<=n;i++)
 	{
-	scanf("%d",&queue[n]);
+	scanf("%d",&q[i]);
     }
 	printf("Enter the head position=");
-	scanf("%d",&c);
-	queue[0]=head;
+	scanf("%d",&h);
+	q[0]=h;
 	for(int j=0;j<n;j++)
 	{
-		diff=abs(queue[j+1]-queue[j]);
-		dist=dist+diff;
+		d=abs(q[j+1]-q[j]);
+		dist=dist+d;
 	}
 	printf("Total distance=%d",dist);
-	
 }
-
